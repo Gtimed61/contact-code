@@ -16,3 +16,18 @@ window.addEventListener('load', function () {
     document.getElementById('bearThumbnail').src = Bear;
     document.getElementById('dogThumbnail').src = Dog;
   });
+
+import { initDb, getDb, postDb } from "./database.js";
+
+  window.addEventListener('load', function () {
+    initDb();
+    document.getElementById('logo').src = Logo;
+    document.getElementById('bearThumbnail').src = Bear;
+    document.getElementById('dogThumbnail').src = Dog;
+
+    getDb();
+    postDb("Lernantino", "learnantino@test.com", 8186601234, "Bear");
+    getDb();
+});
+
+
